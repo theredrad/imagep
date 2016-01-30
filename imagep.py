@@ -13,12 +13,12 @@ class Imagep: #Image Permutation
 
 	def generate(self, m, n):
 		if(m >= self.img.size[0]):
-			name = '' # I couldn't find any better way, so saving pixel rgb array as name for find certain image, but it waste process
-			for w in range(self.img.size[0]):
-				for z in range(self.img.size[1]):
-					name = name + str(self.pixels[w,z]) # add pixel color rgb to file name
-			self.img.save("tmp/" + name + ".bmp")
+			#name = '' # I couldn't find any better way, so saving pixel rgb array as name for find certain image, but it waste process
+			#for w in range(self.img.size[0]):
+			#	for z in range(self.img.size[1]):
+			#		name = name + str(self.pixels[w,z]) # add pixel color rgb to file name
 			self.counter += 1
+			self.img.save("tmp/" + str(self.counter) + ".bmp")
 			print("File #" + str(self.counter) + " saved.")
 		else:
 			for i in range(m, m+1):
